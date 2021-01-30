@@ -93,7 +93,7 @@ define( 'DB_USER', 'jose' );
 www-data@midnight:/var/www/html/wordpress$ cat wp-config.php | grep PASSW
 cat wp-config.php | grep PASSW
 define( 'DB_PASSWORD', '645dc5a8871d2a4269d4cbe23f6ae103' );
-
+```
 ## Become jose
 ```console
 su jose
