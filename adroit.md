@@ -2,9 +2,9 @@
 
 ## In order to complete the vm you need the following tools
 ```console
-1. sudo apt-get install openjdk-11-jdk
-2. sudo apt-get install jd-gui
-3. eclipse IDE Java Developer (search instructions how to download it)
+1. sudo apt-get install jd-gui (must)
+2. sudo apt-get install openjdk-11-jdk (optionally)
+3. eclipse IDE Java Developer (optionally)
 ```
 ## port scan
 ```console
