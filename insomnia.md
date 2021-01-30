@@ -95,6 +95,6 @@ id
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
-## FAST WAY TO ROOT (www-data -> root)
+## Fast way to root (www-data -> root)
 the www-data also can write the /var/cron/check.sh
 so we are able to priv esc from www-data to root with the same way as julia
