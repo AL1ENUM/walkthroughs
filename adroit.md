@@ -189,10 +189,10 @@ Result : Exception in thread "main" javax.crypto.BadPaddingException: Given fina
 
 So, the writer he changed one character of the encrypted password to avoid the unwanted decryption
 The encrypted password contains two zeros, after changing the substring Kr0 to KrO it returns the password
-
+```console
 previous encrypted password : l4A<REDACTED>Kr015+OEC3aOfdrWafSqwpY=
 correct  encrypted password : l4A<REDACTED>KrO15+OEC3aOfdrWafSqwpY=
-
+```
 ### UPDATED Main.class
 ```console
 import java.io.UnsupportedEncodingException;
