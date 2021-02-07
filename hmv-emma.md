@@ -87,3 +87,24 @@ MariaDB [users]> select * from users;
 └─$ ssh emma@10.0.2.171        
 emma@10.0.2.171's password: 5f******************************
 ```
+## Priv Esc 
+```console
+emma@emma:~$ sudo -l
+Matching Defaults entries for emma on emma:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User emma may run the following commands on emma:
+    (ALL : ALL) NOPASSWD: /usr/bin/gzexe
+emma@emma:~$ ls
+flag.sh  user.txt  who  who.c
+emma@emma:~$ ./who
+Im 
+uid=0(root) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev),1000(emma)
+But now Im 
+uid=1000(emma) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev),1000(emma)
+emma@emma:~$ stat who
+  File: who
+  Size: 16760           Blocks: 40         IO Block: 4096   regular file
+Device: 801h/2049d      Inode: 146490      Links: 1
+Access: (6750/-rwsr-s---)  Uid: (    0/    root)   Gid: ( 1000/    emma)
+```
