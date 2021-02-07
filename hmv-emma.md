@@ -16,11 +16,9 @@
 itwasonlyakiss
 ```
 ## Set up golang
-```console
-sudo apt-get install golang
-go get github.com/neex/phuip-fpizdam
-export PATH=$PATH:$(go env GOPATH)/bin
-```
+- sudo apt-get install golang
+- go get github.com/neex/phuip-fpizdam
+- export PATH=$PATH:$(go env GOPATH)/bin
 ## Run the script
 ```console
 ┌──(alienum㉿kali)-[~]
