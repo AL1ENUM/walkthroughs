@@ -115,7 +115,7 @@ Element found: 36
 <br>
 <p>6 6 1337leet</p>
 </body>
-
+```
 ## Generate wordlist using crunch
 ```console
 ┌──(alienum㉿kali)-[~/Desktop]
@@ -294,9 +294,10 @@ public class LoginDataSource
 ## SSH as irida
 #### Reading the hint
 hint : after user1 shell, user2 allows user1 to analyze the file, because user2 made a little mistake with his password, just one more useless little dot.
-- wrong password = <redacted0>.<redacted1>.<redacted2>.<redacted3>.<redacted4>
-- correct password = <redacted0>.<redacted1>.<redacted2>.<redacted3><redacted4>
+- wrong password = ```<redacted0>.<redacted1>.<redacted2>.<redacted3>.<redacted4>```
+- correct password = ```<redacted0>.<redacted1>.<redacted2>.<redacted3><redacted4>```
 - There is no dot between <redacted3> and <redacted4>
+
 ```console
 ┌──(alienum㉿kali)-[~]
 └─$ ssh irida@10.0.2.176
