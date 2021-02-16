@@ -1,4 +1,4 @@
-# Orasi - HackMyVM - Walkthrough 
+# Orasi - Walkthrough 
 
 ## Port Scan
 ```console
@@ -242,9 +242,10 @@ kori@orasi:~$
             ├── LoginFormState.java
             ├── LoginResult.java
             ├── LoginViewModelFactory.java
-            └── LoginViewModel.java
-			
-			
+            └── LoginViewModel.java			
+```
+## Analyze the LoginDataSource.java
+```console
 ┌──(alienum㉿kali)-[~/…/com/alienum/irida/data]
 └─$ cat LoginDataSource.java                                                                                  1 ⨯
 // 
