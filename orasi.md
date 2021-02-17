@@ -1,7 +1,7 @@
 # Orasi - Walkthrough 
 
 ## Port Scan
-```console
+```bash
 ┌──(alienum㉿kali)-[~]
 └─$ nmap 10.0.2.176    
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-02-12 03:20 EET
